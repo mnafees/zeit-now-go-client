@@ -10,7 +10,7 @@ type ClientConfig struct {
 const (
 	BaseEndpoint         = "https://api.zeit.co"
 	RequestLoginEndpoint = BaseEndpoint + "/now/registration"
-	VerifyLoginEndpoint  = RequestLoginEndpoint + "?email=%s&token=%s"
+	VerifyLoginEndpoint  = RequestLoginEndpoint + "/verify?email=%s&token=%s"
 )
 
 // NewConfig creates a new ClientConfig
