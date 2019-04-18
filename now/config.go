@@ -13,10 +13,18 @@ const (
 	VerifyLoginEndpoint  = RequestLoginEndpoint + "/verify?email=%s&token=%s"
 )
 
-// NewConfig creates a new ClientConfig
-func NewConfig() *ClientConfig {
+// NewEmptyTokenConfig creates a new ClientConfig with an empty Token
+func NewEmptyTokenConfig() *ClientConfig {
 	return &ClientConfig{
 		Endpoint: BaseEndpoint,
 		Token:    "",
+	}
+}
+
+// NewConfig creates a new ClientConfig with token as its Token
+func NewConfig(token string) *ClientConfig {
+	return &ClientConfig{
+		Endpoint: BaseEndpoint,
+		Token:    token,
 	}
 }
